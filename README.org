@@ -1,0 +1,51 @@
+#+title: Install Monaco Nerd Font with Homebrew
+
+This project provides a simple way to install the **Monaco Nerd Font** on MacOS using [[https://brew.sh/][Homebrew]].
+
+Monaco Nerd Font is a developer-focused font with programming ligatures and glyphs from popular icons (via [[https://www.nerdfonts.com/][Nerd Fonts]]).
+
+* 🔧 Installation
+
+1. *Ensure Homebrew is installed*
+
+   If you haven't installed Homebrew yet, run:
+   #+begin_src bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   #+end_src
+
+2. *Tap the repository and install the font*
+
+   Run the following commands:
+   #+begin_src bash
+   brew tap pedh/monaco-nerd-fonts
+   brew install --cask font-monaco-nerd-font
+   #+end_src
+
+   This will install the font to =~/Library/Fonts/= and make it available for the user.
+
+* 📦 Usage
+
+After installation:
+- Restart your terminal or code editor (e.g., VS Code, iTerm2, etc.).
+- Set the font in your application settings to ="Monaco Nerd Font"=.
+
+* 💡 Tips
+
+- To verify the font installation:
+  #+begin_src bash
+  fc-list | grep "Monaco Nerd Font"
+  #+end_src
+
+- If the font doesn't appear immediately, rebuild your font cache:
+  #+begin_src bash
+  sudo fc-cache -fv
+  #+end_src
+
+* 📚 About Monaco Nerd Font
+
+[[https://github.com/pedh/monaco-nerd-fonts][Monaco Nerd Font]] is a terminal-friendly monaco font, with extra nerd glyphs, patched with [[https://github.com/ryanoasis/nerd-fonts#font-patcher][ryanoasis's nerd patcher]].
+
+* 📌 Notes
+
+- This script is tested on MacOS (Intel and Apple Silicon).
+- For Linux users, use the Nerd Fonts installer or manual installation instructions from the [[https://github.com/pedh/monaco-nerd-fonts][Monaco Nerd Fonts GitHub repo]].
